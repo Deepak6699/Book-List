@@ -4,11 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    .success,.error{
+        color: white;
+        padding: 5px;
+        margin: 5px 0 15px 0;
+    }
+    .success{
+        background: green;
+    }
+    .error{
+        background: red;
+    }
+    </style>
     <title>Book List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
 </head>
 <body>
-    
+    <div class="container">
+        <h1 class="display-4">Add Book</h1>
+        <form id ="book-form">
+            <div class="d-block pb-3">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="d-block w-100">
+            </div>
+            <div class="d-block pb-3">
+                <label for="author">Author</label>
+                <input type="text" id="author" class="d-block w-100">
+            </div>
+            <div class="d-block pb-3">
+                <label for="isbn">ISBN#</label>
+                <input type="text" id="isbn" class="d-block w-100">
+            </div>
+            <div>
+                <input type="submit" value="Submit" class=" btn btn-primary w-100">
+            </div>
+        </form>
+            <table class="table table-inverse table-hover">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="book-list">
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>
